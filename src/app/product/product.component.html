@@ -1,0 +1,29 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active"><a routerLink = "/">Dashboard</a></li>
+</ol>
+<h2> Add New Product</h2>
+
+<form id="formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)" ngNativeValidate>
+  <div class="form-group row">
+    <label for="name" class="col-2 col-form-label">Name: </label> 
+    <div class="col-10">
+      <input type="text" name="name" class="form-control" required id="name" placeholder="name" ngModel><br>              
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="color" class="col-2 col-form-label">Color: </label> 
+    <div class="col-10">
+      <input type="text" name="color" class="form-control" required id="color" placeholder="color" ngModel><br>      
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="price" class="col-2 col-form-label">Price: </label> 
+    <div class="col-10">
+      <input type="number" name="price" class="form-control" required id="price" placeholder="price" ngModel><br>      
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
+<br>
+<h3 *ngIf = "isAdded">{{confirmationMessage}}</h3>

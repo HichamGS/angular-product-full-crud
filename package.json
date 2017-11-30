@@ -1,6 +1,7 @@
 {
   "name": "angularapp",
-  "version": "0.0.0",
+  "author": "hicham ajarif",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -22,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
+    "json-server": "^0.12.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

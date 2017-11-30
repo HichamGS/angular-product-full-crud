@@ -1,0 +1,36 @@
+<div class="title_bar">
+    <div class="float-left">
+      <h1 class="page_title">Product List</h1>
+    </div>
+    <div class="float-right">
+      <div class="action_items">
+        <span class="action_item">
+          <a routerLink = '/product'>New Product</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead class="thead-inverse">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Price ($)</th> 
+        <th></th>       
+      </thead>
+    <tbody>
+      <tr *ngFor = "let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.color}}</td>
+        <td>{{product.price}}</td>   
+        <td class="actions-col">
+          <a class="edit_link " title="Edit" [routerLink] = "['/updateProduct', product.id]">Edit</a>
+          <a class="delete_link " title="Delete" (click) = "deleteProduct(product.id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
